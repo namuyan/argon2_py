@@ -27,7 +27,7 @@ if sys.platform.startswith('linux'):
 elif sys.platform.startswith('win32'):
     DEFINE_MACROS = [('inline', '__inline')]
     LIBRARY_DIRS = [r'c:\OpenSSL-Win32\lib']
-    LIBRARIES = ['libeay32', 'advapi32']
+    LIBRARIES = ['libcrypto', 'advapi32']
     INCLUDES = [r'c:\OpenSSL-Win32\include', 'argon2-windows-stubs/include']
 elif sys.platform.startswith('darwin') and platform.mac_ver()[0] < '10.6':
     DEFINE_MACROS = [('HAVE_SYSCTL_HW_USERMEM', '1')]
